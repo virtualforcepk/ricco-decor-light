@@ -9,7 +9,7 @@ export default defineConfig({
     // Bind all interfaces (IPv4 included). This box's Chrome is IPv4-only, so
     // a default IPv6-only `localhost` bind is unreachable — host:true fixes it.
     host: true,
-    port: 5194,
+    port: 5195,
     strictPort: true,
   },
   build: {
