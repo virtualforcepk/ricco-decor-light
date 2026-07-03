@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import { Nav } from './components/layout/Nav'
 import { Footer } from './components/layout/Footer'
+import { ScrollProgress } from './components/ui/ScrollProgress'
 import { useScrollExperience } from './hooks/useScrollExperience'
 
 // Shared chrome for every page: Nav + Footer + the scroll experience. The
@@ -20,6 +21,7 @@ export function Layout() {
       </a>
 
       <Nav />
+      <ScrollProgress />
 
       <main id="main" className="relative z-10">
         <Outlet />

@@ -14,8 +14,15 @@ export function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="relative z-10 border-t border-brass/10 bg-paper/95">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
+    <footer className="relative z-10 overflow-hidden border-t border-brass/10 bg-paper/95">
+      {/* Editorial watermark — the wordmark ghosted behind the footer. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 -bottom-[0.18em] select-none text-center font-display text-[17vw] leading-none tracking-[0.08em] whitespace-nowrap text-ink/[0.045]"
+      >
+        RICCO DECOR
+      </div>
+      <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-12">
           {/* Brand */}
           <div className="md:col-span-5">

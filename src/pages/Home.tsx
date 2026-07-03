@@ -1,6 +1,7 @@
 import { Seo } from '../components/Seo'
 import { Hero } from '../components/sections/Hero'
 import { Positioning } from '../components/sections/Positioning'
+import { Marquee } from '../components/ui/Marquee'
 import { Services } from '../components/sections/Services'
 import { BiggestHits } from '../components/sections/BiggestHits'
 import { Portfolio } from '../components/sections/Portfolio'
@@ -18,6 +19,7 @@ export default function Home() {
       />
       <Hero />
       <Positioning />
+      <Marquee />
       <Services cta={{ label: 'All services', to: '/services' }} />
       <BiggestHits />
       <Portfolio

@@ -104,7 +104,7 @@ export function Portfolio({
           {tiles.map((tile) => (
             <figure
               key={tile.id}
-              className="group relative mb-4 block break-inside-avoid overflow-hidden rounded-sm bg-raised"
+              className="group relative mb-4 block break-inside-avoid overflow-hidden rounded-sm bg-raised after:pointer-events-none after:absolute after:inset-3 after:border after:border-brass-bright/0 after:transition-colors after:duration-500 hover:after:border-brass-bright/50"
             >
               <img
                 src={tile.src}

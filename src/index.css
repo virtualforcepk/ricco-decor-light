@@ -103,6 +103,37 @@
   animation: scroll-cue 2.4s var(--ease-cinematic) infinite;
 }
 
+/* Hero glow — a slow breath so the light feels alive, never strobing. */
+@keyframes glow-breathe {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.06);
+  }
+}
+.hero-glow {
+  animation: glow-breathe 9s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+/* Services marquee — an editorial ribbon drifting past. Track holds two copies
+   of the content, so -50% loops seamlessly. Reduced-motion zeroes it (static). */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee-scroll 44s linear infinite;
+}
+
 /* Lenis: the library adds these classes; keep its scroll model intact. */
 html.lenis,
 html.lenis body {

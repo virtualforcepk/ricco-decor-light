@@ -60,8 +60,11 @@ export function Nav() {
                 <Link
                   to={link.href}
                   className={[
-                    'font-body text-sm font-light tracking-wide transition-colors hover:text-ink',
-                    pathname === link.href ? 'text-brass' : 'text-muted',
+                    'relative font-body text-sm font-light tracking-wide transition-colors hover:text-ink',
+                    'after:absolute after:-bottom-1.5 after:left-0 after:h-px after:w-full after:origin-left after:bg-brass after:transition-transform after:duration-300 after:ease-out hover:after:scale-x-100',
+                    pathname === link.href
+                      ? 'text-brass after:scale-x-100'
+                      : 'text-muted after:scale-x-0',
                   ].join(' ')}
                 >
                   {link.label}
